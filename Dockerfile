@@ -22,6 +22,9 @@ COPY res/mysql_db.sql /tmp/
 COPY res/ganib.sql /tmp/
 RUN bash /tmp/mysql_init.sh
 
+# clean up
+RUN rm -f /tmp/mysql_init.sh /tmp/mysql_db.sql /tmp/ganib.sql
+
 EXPOSE 8080
 
 # run services
