@@ -7,6 +7,7 @@ RUN yum update -y
 RUN yum install -y mysql-community-server \
 	mysql-community-client \
 	mysql-connector-java \ 
+	java-1.7.0-openjdk \
 	tomcat
 
 RUN ln -s /usr/share/java/mysql-connector-java.jar /usr/share/java/tomcat/
